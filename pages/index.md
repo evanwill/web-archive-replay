@@ -1,6 +1,6 @@
 ---
-title: bootstrap5-template Demo
+title: web-archive-replay Demo
 layout: page
 ---
 
-{% include jumbotron.html heading=site.title text="Create a site from a basic bootstrap template" button-text="Learn More" button-link="about.html" %}
+{% include jumbotron.html heading=site.title text="Create self-contained access to a web archive using [ReplayWeb.page](https://replayweb.page/docs/embedding)" button-text="Demo Archive" button-link="example.html" %}
