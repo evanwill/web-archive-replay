@@ -1,0 +1,10 @@
+---
+layout: page-full-width
+---
+
+{{ content }}
+
+<!-- load replaywebpage ui -->
+<script src="{{ '/assets/lib/replaywebpage/ui.js' | relative_url }}"></script>
+<!-- add interface component --> 
+<replay-web-page source="{{ '/archives/' | relative_url }}{{ page.archive }}"></replay-web-page>
