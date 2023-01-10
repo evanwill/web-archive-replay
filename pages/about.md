@@ -2,17 +2,21 @@
 title: About This Template
 nav: About
 nav_order: 2
+layout: page-narrow
 ---
 
-[bootstrap5-template](https://github.com/thecdil/bootstrap5-template) is a basic template repository to create a [Bootstrap 5](https://getbootstrap.com/) site using Jekyll on GitHub Pages (or where every you want to host it). 
-The layout is based on the [Bootstrap starter template example](https://getbootstrap.com/docs/5.1/examples/) with a navbar, search box (using lunr.js), and sticky footer.
-It is intended as a quick starting point for creating new web projects.
+*This is a demo proof of concept project!*
 
-The basic steps for using bootstrap-template are: 
+The web-archive-replay template uses [ReplayWeb.page embedding](https://replayweb.page/docs/embedding) to provide access to a web archive file (WACZ or WARC format) in a completely self-contained static web project.
+All necessary dependencies are included in the template so that you do not have to rely on 3rd party CDNs or APIs.
+This allows you to sustainably publish a curated web archive along side contextual information as a digital exhibit website.
+
+The basic steps for using the template are: 
 
 1. create repository from the template
 2. edit _config.yml
 3. edit content pages
-4. use customization options
+4. add web archive to a page
 
-See [docs/create-website.md](https://github.com/thecdil/bootstrap5-template/blob/main/docs/create-website.md) for details!
+See [docs/setup-web-archive.md](https://github.com/evanwill/web-archive-replay/blob/main/docs/setup-web-archive.md) for details.
+The template builds on [bootstrap5-template](https://github.com/thecdil/bootstrap5-template)--see "docs/create-website.md" for details on setting up and customizing the basic website. 

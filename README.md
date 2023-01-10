@@ -1,5 +1,7 @@
 # web-archive-replay
 
+*This is a demo proof of concept project!*
+
 [web-archive-replay](https://github.com/evanwill/web-archive-replay) is a basic template repository to create a self-contained site to access web archive captures using Jekyll on GitHub Pages (or where every you want to host it) powered by [ReplayWeb.page](https://replayweb.page/docs/embedding).
 This allows you to sustainably publish a curated web archive along side contextual information as a stand alone digital exhibit website.
 
