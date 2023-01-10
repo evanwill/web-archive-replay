@@ -14,7 +14,7 @@ description: "a basic template to create self-contained access a web archive"
 year: 2023
 author: evan will 
 # add search box to navbar, true/false
-search: true
+search: false
 
 ##########
 # URL VARIABLES [optional!]

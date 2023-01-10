@@ -1,13 +1,15 @@
 # web-archive-replay
 
-[web-archive-replay](https://github.com/evanwill/web-archive-replay) is a basic template repository to create a self-contained, stand alone site to access web archive captures using Jekyll on GitHub Pages (or where every you want to host it).
-Powered by [ReplayWeb.page](https://replayweb.page/docs/embedding).
+[web-archive-replay](https://github.com/evanwill/web-archive-replay) is a basic template repository to create a self-contained site to access web archive captures using Jekyll on GitHub Pages (or where every you want to host it) powered by [ReplayWeb.page](https://replayweb.page/docs/embedding).
+This allows you to sustainably publish a curated web archive along side contextual information as a stand alone digital exhibit website.
 
-Demo:
+Demo: <https://evanwill.github.io/web-archive-replay/>
 
 ## Get Started 
 
-From https://github.com/thecdil/bootstrap5-template 
+See "docs/setup-web-archive.md" for details of web archive interface. 
+
+Basic site set up:
 
 - Click green "Use this template" button to make a copy of the code in your own repository (alternatively, use Import or manually copy files)
 - Edit `_config.yml` with your site information
@@ -19,13 +21,6 @@ From https://github.com/thecdil/bootstrap5-template
 - Use "includes" to simplify adding Bootstrap features to Markdown pages (see comments in the "_include/" files for instructions).
 
 See [docs/create-website.md](https://github.com/thecdil/bootstrap5-template/blob/main/docs/create-website.md) for more details.
-
-## Customize 
-
-- Tweak base variables in `assets/css/main.scss` (text color, link color, container size)
-- Tweak bootstrap theme colors using `_data/theme-colors.csv` (add a css color in the color column next to the BS color-class to override, or create a new class name. This will generate btn-, text-, and bg- classes.)
-- Add custom CSS to `_sass/_custom.scss` (content of `_sass/_template.scss` relates to template components)
-- Use Bootstrap to customize `_layouts/` and `_includes/template/`.
 
 ## Template Assets
 
