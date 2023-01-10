@@ -7,4 +7,6 @@ layout: page-full-width
 <!-- load replaywebpage ui -->
 <script src="{{ '/assets/lib/replaywebpage/ui.js' | relative_url }}"></script>
 <!-- add interface component --> 
-<replay-web-page source="{{ '/archives/' | relative_url }}{{ page.archive }}"></replay-web-page>
+<div class="ratio ratio-1x1">
+    <replay-web-page source="{% if page.archive contains '://' %}{{ page.archive }}{% else %}{{ '/archives/' | relative_url }}{{ page.archive }}{% endif %}"></replay-web-page>
+</div>
