@@ -20,6 +20,12 @@ The template contains an example, "archives/demo-archive.wacz".
 
 If you are storing the project on GitHub, keep in mind the storage limits--your archives should probably not be over 500 MB unless you set up LFS or some other solution.
 
+Alternately, you can host your WACZ file in some other web location that has CORS enabled (e.g. AWS, Zenodo).
+For example, if you upload your WACZ to Zenodo, your item will have a main page like "https://zenodo.org/record/6390157".
+Scroll down and click on "JSON" under the Export options to view the detailed metadata, e.g. "https://zenodo.org/record/6390157/export/json". 
+Look in the object "files" > "links" > "self" for the URL using the file API, e.g. "https://zenodo.org/api/files/88a7020c-f61e-4d00-89ba-c000dbc23b5e/test.wacz".
+Use this URL to add the archive to your display page.
+
 ## Add Web Archive to a Page
 
 To display the ReplayWeb.page access interface on your website, you will edit one of the content pages of the site. 
