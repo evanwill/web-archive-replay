@@ -17,6 +17,8 @@ Your archive will be saved as a WACZ file, look for the `.wacz` extension.
 
 Copy your `.wacz` or `.warc` archive file into your project's "archives" folder. 
 The template contains an example, "archives/demo-archive.wacz".
+Note, [WACZ](https://specs.webrecorder.net/wacz/latest/) is preferred format that is specifically designed for this use case, allowing very efficient access to the index and contents of the archive without forcing the user to download the entire file.
+You can use the [py-wacz](https://github.com/webrecorder/py-wacz) utility to repackage existing WARC files into WACZ format.
 
 If you are storing the project on GitHub, keep in mind the storage limits--your archives should probably not be over 500 MB unless you set up LFS or some other solution.
 
