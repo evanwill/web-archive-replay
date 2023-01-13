@@ -20,13 +20,14 @@ The template contains an example, "archives/demo-archive.wacz".
 Note, [WACZ](https://specs.webrecorder.net/wacz/latest/) is preferred format that is specifically designed for this use case, allowing very efficient access to the index and contents of the archive without forcing the user to download the entire file.
 You can use the [py-wacz](https://github.com/webrecorder/py-wacz) utility to repackage existing WARC files into WACZ format.
 
-If you are storing the project on GitHub, keep in mind the storage limits--your archives should probably not be over 500 MB unless you set up LFS or some other solution.
+If you are storing the project on GitHub, keep in mind the [storage limits and file size limits](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#file-size-limits)--your archives should probably not be over 500 MB unless you set up LFS or some other solution.
 
 Alternately, you can host your WACZ file in some other web location that has CORS enabled (e.g. AWS, Zenodo).
 For example, if you upload your WACZ to Zenodo, your item will have a main page like "https://zenodo.org/record/6390157".
 Scroll down and click on "JSON" under the Export options to view the detailed metadata, e.g. "https://zenodo.org/record/6390157/export/json". 
 Look in the object "files" > "links" > "self" for the URL using the file API, e.g. "https://zenodo.org/api/files/88a7020c-f61e-4d00-89ba-c000dbc23b5e/test.wacz".
 Use this URL to add the archive to your display page.
+*Note: Zenodo probably does not work other than for a demo as the file API seems to have a rate limit--to avoid downloading the full file, ReplayWeb.page does bunches of tiny requests, which seems to trigger the rate limit...*
 
 ## Add Web Archive to a Page
 

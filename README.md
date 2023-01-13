@@ -7,9 +7,11 @@ This allows you to sustainably publish a curated web archive along side contextu
 
 Demo: <https://evanwill.github.io/web-archive-replay/>
 
+See also [web-replay-gen](https://github.com/webrecorder/web-replay-gen), an Eleventy project template from the Webrecorder team with a similar aim.
+
 ## Get Started 
 
-See "docs/setup-web-archive.md" for details of web archive interface. 
+See ["docs/setup-web-archive.md"](https://github.com/evanwill/web-archive-replay/blob/main/docs/setup-web-archive.md) for details of how to set up the web archive access. 
 
 Basic site set up:
 
