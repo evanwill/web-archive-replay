@@ -3,11 +3,68 @@
     see assets/css/main.scss for variables
 */
 
+/* sass needed */ 
+@use 'sass:meta';
+
+/* set base variables to override from main.scss */
+$text-color: null !default;
+$link-color: null !default;
+$base-font-size: null !default;
+$container-narrow: 750px !default;
+$container-max: null !default;
+
+/* smooth scroll for back to top, unless user opt out */
+html {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+}
+
+/* change default text colors */
+body {
+    @if meta.variable-exists(base-font-family) { font-family: $base-font-family; }
+    @if meta.variable-exists(base-font-size) { font-size: $base-font-size; }
+    @if meta.variable-exists(text-color) { color: $text-color; }
+    @if meta.variable-exists(code-font-family) { code { font-family: $code-font-family; } }
+}
+@if meta.variable-exists(link-color) {
+    a {
+        color: $link-color;
+        @if meta.variable-exists(text-color) {
+            &:hover {
+                color: $text-color; 
+            }
+        }
+    }
+}
+/* remove link underline */ 
+a { text-decoration: none; }
+
+/* narrow container */ 
+@media (min-width:992px){
+    .container-narrow{max-width:$container-narrow}
+}
+@media (min-width:1200px){
+    .container-narrow{max-width:$container-narrow}
+}
+
+
+/* change container size for easier reading */
+@if meta.variable-exists(container-max) {
+    @media (min-width:992px){
+        .container{max-width:$container-max}
+    }
+    @media (min-width:1200px){
+        .container{max-width:$container-max}
+    }
+}
+
+
 /* skip nav for accessibility, based on https://webaim.org/techniques/skipnav/ */
 #skip-to-content a {
 	padding:6px;
 	position: absolute;
-	top:-200px;
+	top:-100px;
 	left:0px;
 	color:white;
 	border-right:1px solid white;
@@ -27,43 +84,18 @@
     transition: top .1s ease-in;
 }
 
-/* change default text colors */
-body {
-    @if variable-exists(base-font-family) { font-family: $base-font-family; }
-    @if variable-exists(base-font-size) { font-size: $base-font-size; }
-    @if variable-exists(text-color) { color: $text-color; }
-    @if variable-exists(code-font-family) { code { font-family: $code-font-family; } }
-}
-@if variable-exists(link-color) {
-    a {
-        color: $link-color;
-        @if variable-exists(text-color) {
-            &:hover {
-                color: $text-color; 
-            }
-        }
-    }
-}
-/* remove link underline */ 
-a { text-decoration: none; }
-
-/* narrow container */ 
-@if variable-exists(container-narrow) { 
-    @media (min-width:992px){
-        .container-narrow{max-width:$container-narrow}
-    }
-    @media (min-width:1200px){
-        .container-narrow{max-width:$container-narrow}
-    }
-}
-
-/* change container size for easier reading */
-@if variable-exists(container-max) {
-    @media (min-width:992px){
-        .container{max-width:$container-max}
-    }
-    @media (min-width:1200px){
-        .container{max-width:$container-max}
+/* scroll to top */
+#scroll-to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99;
+    font-size: 40px; 
+    svg {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.1em;
     }
 }
 
@@ -82,16 +114,6 @@ a { text-decoration: none; }
     .feature-w-100 {
         width: 100%!important;
     }
-}
-
-/* scroll to top */
-#scroll-to-top {
-    display: none; 
-    position: fixed; 
-    bottom: 35px; 
-    right: 20px; 
-    z-index: 99;
-    font-size: 40px; 
 }
 
 /* bootstrap icons tweaks */

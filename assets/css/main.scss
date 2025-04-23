@@ -1,20 +1,23 @@
 ---
-# front matter
+# base CSS to add custom theming to the template
 ---
 
-// add color at page top
-$top-border: #424242;
+/* bring in template styles */
+@forward "template" with (
 
-// Tweak body text and link color
-$text-color: #111 !default;
-$link-color: #0d6efd !default;
-$base-font-size: 1.1rem;
+  /* use the variables here to tweak the base template theme. Comment out options that you do not want to use. */
+  
+  // Tweak body text and link color
+  $text-color: #111,
+  //$link-color: #0d6efd,
+  $base-font-size: 1.1rem,
 
-// limit container size to make reading easier
-$container-narrow: 750px;
-//$container-max: 750px;
+  // page narrow size
+  $container-narrow: 750px,
+  // limit base container size to make reading easier
+  //$container-max: 750px,
+  
+);
 
-// Import partials.
-@import
-  "template", "custom"
-;
+/* bring in custom styles */
+@use "custom";
