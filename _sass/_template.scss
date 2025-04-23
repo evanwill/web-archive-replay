@@ -3,16 +3,6 @@
     see assets/css/main.scss for variables
 */
 
-/* sass needed */ 
-@use 'sass:meta';
-
-/* set base variables to override from main.scss */
-$text-color: null !default;
-$link-color: null !default;
-$base-font-size: null !default;
-$container-narrow: 750px !default;
-$container-max: null !default;
-
 /* smooth scroll for back to top, unless user opt out */
 html {
     @media (prefers-reduced-motion: no-preference) {
@@ -22,15 +12,15 @@ html {
 
 /* change default text colors */
 body {
-    @if meta.variable-exists(base-font-family) { font-family: $base-font-family; }
-    @if meta.variable-exists(base-font-size) { font-size: $base-font-size; }
-    @if meta.variable-exists(text-color) { color: $text-color; }
-    @if meta.variable-exists(code-font-family) { code { font-family: $code-font-family; } }
+    @if variable-exists(base-font-family) { font-family: $base-font-family; }
+    @if variable-exists(base-font-size) { font-size: $base-font-size; }
+    @if variable-exists(text-color) { color: $text-color; }
+    @if variable-exists(code-font-family) { code { font-family: $code-font-family; } }
 }
-@if meta.variable-exists(link-color) {
+@if variable-exists(link-color) {
     a {
         color: $link-color;
-        @if meta.variable-exists(text-color) {
+        @if variable-exists(text-color) {
             &:hover {
                 color: $text-color; 
             }
@@ -50,7 +40,7 @@ a { text-decoration: none; }
 
 
 /* change container size for easier reading */
-@if meta.variable-exists(container-max) {
+@if variable-exists(container-max) {
     @media (min-width:992px){
         .container{max-width:$container-max}
     }
