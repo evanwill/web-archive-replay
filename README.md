@@ -30,8 +30,8 @@ See [docs/create-website.md](https://github.com/thecdil/bootstrap5-template/blob
 
 Included in assets/lib folder:
 
-- [ReplayWeb.page](https://github.com/webrecorder/replayweb.page/)
-- [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) 5.2
-- [Bootstrap Icons](https://icons.getbootstrap.com/) 1.9
+- [ReplayWeb.page](https://github.com/webrecorder/replayweb.page/) 2.3.4 
+- [Bootstrap](https://getbootstrap.com/) 5.3.5
+- [Bootstrap Icons](https://icons.getbootstrap.com/) 1.11.3
 - [lunr.js](https://lunrjs.com/) 2.3.9
 - [lazysizes](https://github.com/aFarkas/lazysizes) 5.3.2
